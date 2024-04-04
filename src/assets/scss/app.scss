@@ -2,7 +2,7 @@
 @use './../../../node_modules/bootstrap/scss/bootstrap.scss';
 
 @use "./partials/_variables.scss" as *;
-/* @use "./partials/_documentation.scss"; */
+@use "./partials/_JumboTron.scss";
 
 body {
     background-color: $bg_body;
@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #ebbdfe;
+    background-color: $bg_body;
     height: 123px;
 
 
@@ -33,13 +33,12 @@ body::-webkit-scrollbar-track {
 }
 
 a {
-    text-decoration: none;
     color: #1dc0bb;
 }
 
-img{
+/* img{
     pointer-events: none;
-}
+} */
 
 .btn_bg {
     background-color: $bg_body;
@@ -64,3 +63,72 @@ img{
   .cursor-light.hidden {
     opacity: 1; /* Quando il cursore è fermo, rendi il pallino completamente visibile */
   }
+
+  .zoom-effect {
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center center;
+}
+
+.zoom-effect:hover {
+    transform: scale(1.1);
+    background-color: $primary;
+    color: $light;
+}
+
+.lucas_link {
+    border: 1px solid $primary;
+}
+
+
+.bg_primary{
+    background-color: $primary;
+}
+
+.bg_tulip_tree{
+    background-color: $clr_tulip_tree;
+}
+
+.txt_primary {
+    color: $primary;
+}
+
+
+.txt_title_thin {
+    font-weight: lighter;
+    color: $primary
+}
+
+.txt_steps {
+    font-weight: lighter;
+    color: $neutral
+}
+
+.txt_note {
+    color: $info;
+}
+
+.color_txt_link {
+    transition: transform 1.5s ease-in-out;
+    text-decoration: none;
+}
+
+.color_txt_link:hover {
+    background-color: $primary;
+    color: $light;
+}
+
+.my_flow {
+    margin-top: 5rem;
+}
+
+.btn_arrow {
+    background-color: $dark ;
+    color: $primary;
+    border: 3px solid $primary;
+    border-radius: 50%;
+}
+
+.btn_arrow:hover {
+    background-color: $primary;
+    color: $light;
+}
