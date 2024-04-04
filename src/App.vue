@@ -65,13 +65,13 @@ onMounted(() => {
             </button>
           </RouterLink>
 
-          <RouterLink active-class="active" to="/about">
+          <RouterLink active-class="active" to="/lucas">
             <button class="rounded-2 btn_bg_green mx-1">
               <span>LUCAS</span>
             </button>
           </RouterLink>
 
-          <RouterLink active-class="active" to="/opera">
+          <RouterLink active-class="active" to="/steps">
             <button class="rounded-2 btn_bg_purple mx-1">
               <span>Steps</span>
             </button>
