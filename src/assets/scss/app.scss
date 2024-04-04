@@ -1,0 +1,66 @@
+
+@use './../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@use "./partials/_variables.scss" as *;
+/* @use "./partials/_documentation.scss"; */
+
+body {
+    background-color: $bg_body;
+    color: $light;
+    font-family: monospace;
+    overflow-x: hidden;
+    cursor: url(./../img/dec/neonGreen_cursor_.svg), auto;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ebbdfe;
+    height: 123px;
+
+
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #1dc0bb;
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    border-left: 1px solid $bg_body;
+}
+
+a {
+    text-decoration: none;
+    color: #1dc0bb;
+}
+
+img{
+    pointer-events: none;
+}
+
+.btn_bg {
+    background-color: $bg_body;
+    color: #1dc0bb;
+}
+
+.cursor-light {
+    position: fixed;
+    width: 20px; /* Larghezza della luce */
+    height: 20px; /* Altezza della luce */
+    border-radius: 50%; /* Rendi la luce circolare */
+    background-color: #01fff7; /* Colore della luce verde neon */
+    pointer-events: none; /* Assicura che l'elemento non intercetti gli eventi del mouse */
+    mix-blend-mode: screen; /* Mescola la luce con lo sfondo in modo che sembri più luminosa */
+    z-index: 9999; /* Assicura che la luce sia sopra gli altri elementi */
+    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease; /* Aggiungi una transizione per un effetto più fluido */
+    opacity: 0; /* Imposta l'opacità iniziale a 0 */
+    /* filter: blur(5px);  *//* Aggiungi un effetto di sfocatura */
+    box-shadow: 0 0 20px 15px #00fff7; /* Aggiungi un'ombra luminosa */
+  }
+  
+  .cursor-light.hidden {
+    opacity: 1; /* Quando il cursore è fermo, rendi il pallino completamente visibile */
+  }
