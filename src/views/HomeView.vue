@@ -22,10 +22,8 @@ export default {
 <template>
     <main>
         <section class="jumbotron">
-
             <div class="container">
-                <div class="row justify-content-center">
-
+                <div class="row justify-content-center mb-5">
                     <div class="col-12 col-lg-6 bg_row_img py-5 my-2 align-content-center introduce">
                         <h1><strong>Hi, I'm </strong><span class="txt_title_thin">FRA</span></h1>
                         <p>
@@ -33,8 +31,9 @@ export default {
                             Landscape:
                             <a href="https://corsi.unibo.it/2cycle/LandscapePlanningManagement" target="_blank"><span
                                     class="txt_primary color_txt_link"> PROGESA</span> </a><br>
-                            The study program contribute to the pursuit of the <br>
-                            UN 2030 Agenda for
+                            The study program contribute to the pursuit of the <br><span
+                                class="txt_primary color_txt_link" target="_blank"> UN 2030 Agenda for
+                            </span>
                             <a href="https://www.un.org/sustainabledevelopment/" target="_blank"><span
                                     class="txt_primary color_txt_link" target="_blank">Sustainable
                                     Development Goals.</span> </a> <br>
@@ -48,9 +47,9 @@ export default {
                             data collection for the <span class="txt_primary">LUCAS2022</span> project.
                         </p>
                         <p>
-                            On this page you will find the explanation of how to optimize the work of the <span
+                            On this website you will find the explanation of how to optimize the work of the <span
                                 class="txt_primary">LUCAS Detector</span>;
-                            through the use of open source software.
+                            by the use of open source software.
                         </p>
                         <p>
                             If you want to know more about the LUCAS project click the button below.
@@ -61,36 +60,153 @@ export default {
                                 class="btn text-light zoom-effect lucas_link" target="_blank"><strong>LUCAS
                                     website</strong></a>
                         </div>
-
-
                     </div>
 
                     <div class="col-12 col-lg-4 d-flex flex-wrap goals mx-4 col_goals_onu">
-
                         <div class="col-3 text-center p-2" v-for="goal in goalsArray" :key="goal.img">
                             <a :href="goal.link" target="_blank">
                                 <img class="rounded-4 zoom-effect-goals" :src="getImagePath(goal.img)" alt="Goal Image">
                             </a>
-
                         </div>
-
                     </div>
+                </div>
 
-                    
+                <div class="row">
+                    <div class="col-12" style="height: 50px;"></div>
+                </div>
 
-
-
+                <div class="row justify-content-center my-2">
+                    <div class="col-12 text-center ">
+                        <h3>Estimated technical and logistical requirements</h3>
+                    </div>
+                    <div class="col-4 col-lg-6 req_list font-monospace text-center py-4">
+                        <span class="py-2 "><span class="txt_title_thin">SHORTEST</span> route / </span>
+                        <span class="py-2"><span class="txt_title_thin">VIABILITY</span> by car / </span>
+                        <span class="py-2"><span class="txt_title_thin">WALKING</span> distance / </span>
+                        <span class="py-2"><span class="txt_title_thin"> TRAVEL</span> time / </span>
+                        <span class="py-2">daily <span class="txt_title_thin">CONSUPTION</span> / </span>
+                        <span class="py-2"><span class="txt_title_thin">ECOLOGICAL</span> footprint</span>
+                    </div>
                 </div>
 
 
+                <div class="row">
+                    <div class="text-center mb-4">
+                        <h1><span class=" txt_title_thin">STACK</span> </h1>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="card bg-dark text-white rounded-4">
+                            <div class="text-center py-3">
+                                <img class="text-center img_card" src="../assets/img/logo/qgis.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti,
+                                    mollitia voluptas? Voluptatibus ratione minus excepturi enim harum possimus
+                                    distinctio dolorem magni? Labore alias numquam totam a impedit quae quibusdam ab.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="card bg-dark text-white rounded-4">
+                            <div class="text-center py-3">
+                                <img class="text-center img_card" src="../assets/img/logo/python.svg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti,
+                                    mollitia voluptas? Voluptatibus ratione minus excepturi enim harum possimus
+                                    distinctio dolorem magni? Labore alias numquam totam a impedit quae quibusdam ab.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="card bg-dark text-white rounded-4">
+                            <div class="text-center py-3">
+                                <img class="text-center img_card" src="../assets/img/logo/ge.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti,
+                                    mollitia voluptas? Voluptatibus ratione minus excepturi enim harum possimus
+                                    distinctio dolorem magni? Labore alias numquam totam a impedit quae quibusdam ab.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="card bg-dark text-white rounded-4">
+                            <div class="text-center py-3">
+                                <img class="text-center img_card" src="../assets/img/logo/gmaps.svg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti,
+                                    mollitia voluptas? Voluptatibus ratione minus excepturi enim harum possimus
+                                    distinctio dolorem magni? Labore alias numquam totam a impedit quae quibusdam ab.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="p-5">
+        <div class="row mt-5">
+            <h4>Contacts</h4>
+            <div class="col-3">
+                <img class="icon_github" src="../assets/img/logo/github_footer.svg" alt="">
+                <img class="icon_github" src="../assets/img/logo/github_footer.svg" alt="">
+                <img class="icon_github" src="../assets/img/logo/github_footer.svg" alt="">
+
+
+            </div>
+            <div class="col-3">
+                <p>
+                    <img class="icon_contact" src="../assets/img/logo/mail.png" alt="">
+                    eso.fra24@gmail.com
+                </p>
+            </div>
+
+            <div class="col-6">
 
             </div>
 
-        </section>
-
-
-
-    </main>
+        </div>
+    </footer>
 </template>
 
-<style></style>
+<style scoped>
+.img_card {
+    width: 50%;
+}
+
+.icon_github{
+    width: 20%;
+}
+
+
+
+.icon_contact {
+    width: 30%;
+}
+
+#footer {
+
+    background-color: #000000;
+}
+
+@media (max-width: 786px) {
+    .icon_contact {
+        width: 60%;
+    }
+}
+</style>
