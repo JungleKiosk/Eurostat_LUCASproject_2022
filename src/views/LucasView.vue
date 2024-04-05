@@ -1,4 +1,17 @@
-<script setup>
+<script>
+import Footer from '../components/Footer.vue';
+
+
+export default {
+    name: "Home",
+    data() {
+        return {
+        }
+    },
+    components: {
+        Footer
+     }
+}
 
 
 </script>
@@ -28,20 +41,13 @@
                         that
                         particular point, according to the LUCAS regulations and parameters.
                     </p>
-                    <div class="col-12 bg_coma my-3 text-center rounded-3">
-
-                        <span class="txt_lg_vir">“</span>
-                        <p>
-                            The data collection also included <strong>georeferenced photographic images</strong>
-                            taken
-                            in the North,
-                            East,
-                            South and West <strong>(NESO)</strong>
-                        </p>
-                        <span class="txt_lg_vir">“</span>
-
-                    </div>
-
+                    <p>
+                        The data collection also included <strong>georeferenced photographic images</strong>
+                        taken
+                        in the North,
+                        East,
+                        South and West <strong>(NESO)</strong>
+                    </p>
                     <p>
                         This was done with a tablet configured with the dedicated MyLUCAS software, which showed
                         the
@@ -55,7 +61,8 @@
 
                 </div>
 
-                <div class="col-12 col-lg-8 py-5 d-flex flex-wrap justify-content-center parameters">
+
+                <div class="col-12 col-lg-8 py-5 d-flex flex-wrap justify-content-center parameters mb-5">
                     <h1 class="text-center">LUCAS <span class="txt_title_thin">Parameters</span></h1>
 
                     <div class="col-11 col-lg-11 param_item">
@@ -84,11 +91,22 @@
 
                 </div>
 
-
             </div>
         </div>
 
     </section>
+
+
+    <Footer></Footer>
+
 </template>
 
-<style></style>
+<style>
+.img_copernicus {
+    width: 90%;
+}
+
+.img_parameters {
+    width: 80%;
+}
+</style>

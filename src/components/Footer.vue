@@ -5,23 +5,37 @@
 
 
 <template>
-    <footer id="footer" class="p-5">
-        <div class="row mt-5">
-            <h4>Contacts</h4>
-            <div class="col-3">
-                <img class="icon_github" src="../assets/img/logo/github_footer.svg" alt="">
-                <img class="icon_github" src="../assets/img/logo/github_footer.svg" alt="">
-                <img class="icon_github" src="../assets/img/logo/github_footer.svg" alt="">
-            </div>
-            <div class="col-3">
-                <p>
-                    <img class="icon_contact" src="../assets/img/logo/mail.png" alt="">
-                    eso.fra24@gmail.com
-                </p>
+    <footer id="footer" class="p-5 bg-dark">
+        <div class="row justify-content-center mt-5">
+
+            <div class="col-sm-4 col-md-3 text-center">
+                <h3 class=""></h3>
+
+                <a href="#"><img class="icon_social mx-2" src="../assets/img/logo/github_footer.svg" alt=""></a>
+                <a href="#"><img class="icon_social mx-2" src="../assets/img/logo/linkedin_footer.svg" alt=""></a>
+                <a href="#"><img class="icon_social mx-2" src="../assets/img/logo/youtube_footer.svg" alt=""></a>
+
             </div>
 
-            <div class="col-6">
+        </div>
 
+        <div class="row justify-content-center mt-5">
+
+            <div class="col-3 col-lg-2 col-sm-4 col-md-3">
+                <h3>Projects</h3>
+                <ul>
+                    <li><a href="#">Forest Suitability</a></li>
+                    <li><a href="#">Soil Degradation</a></li>
+                    <li><a href="#">Chestnut Zoning</a></li>
+                </ul>
+            </div>
+            <div class="col-3 col-lg-2 col-md-3">
+                <h3>Stack</h3>
+                <ul>
+                    <li><a href="#">QGIS</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">VueJs</a></li>
+                </ul>
             </div>
 
         </div>
@@ -29,24 +43,14 @@
 </template>
 
 <style scoped>
-
-#footer {
-
-background-color: #000000;
+.icon_social {
+    width: 10%;
 }
 
-.icon_github {
-    width: 20%;
-}
-
-.icon_contact {
-    width: 30%;
-}
 
 @media (max-width: 786px) {
-.icon_contact {
-    width: 60%;
+    .icon_social {
+        width: 20%;
+    }
 }
-}
-
 </style>

@@ -99,7 +99,7 @@ export default {
                     <div class="text-center mb-4">
                         <h1><span class=" txt_title_thin">STACK</span> </h1>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-3 mb-3">
                         <div class="card bg-dark text-white rounded-4">
                             <div class="text-center py-3">
                                 <img class="text-center img_card" src="../assets/img/logo/qgis.png" alt="">
@@ -114,7 +114,7 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-3 mb-3">
                         <div class="card bg-dark text-white rounded-4">
                             <div class="text-center py-3">
                                 <img class="text-center img_card" src="../assets/img/logo/python.svg" alt="">
@@ -129,7 +129,7 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-3 mb-3">
                         <div class="card bg-dark text-white rounded-4">
                             <div class="text-center py-3">
                                 <img class="text-center img_card" src="../assets/img/logo/ge.png" alt="">
@@ -144,7 +144,7 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-3 mb-3">
                         <div class="card bg-dark text-white rounded-4">
                             <div class="text-center py-3">
                                 <img class="text-center img_card" src="../assets/img/logo/gmaps.svg" alt="">
@@ -167,7 +167,7 @@ export default {
     <Footer></Footer>
 </template>
 
-<style scoped>
+<style >
 .img_card {
     width: 50%;
 }

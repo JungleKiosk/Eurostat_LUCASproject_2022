@@ -166,7 +166,6 @@ li a:hover {
     border: white;
 }
 
-
 .pulp {
     padding: 10px 20px;
     cursor: pointer;

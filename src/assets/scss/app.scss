@@ -3,6 +3,7 @@
 
 @use "./partials/_variables.scss" as *;
 @use "./partials/_JumboTron.scss";
+@use "./partials/_parameters.scss";
 
 body {
     background-color: $bg_body;
