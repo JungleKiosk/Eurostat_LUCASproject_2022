@@ -46,13 +46,7 @@ onMounted(() => {
       Your browser does not support the video tag.
     </video> -->
 
-  <div class="content-container bg-dark py-4">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-4 text-center">
-        <img :style="{ filter: neonEffect ? 'drop-shadow(0 0 20px #8500FF)' : 'none' }"
-          src="./assets/img/logo/loGoviv_sign.svg" alt="">
-      </div>
-    </div>
+  <div class="container-fluid bg-dark py-4">
 
     <!-- <div class="lt-animation-top"></div> -->
 
