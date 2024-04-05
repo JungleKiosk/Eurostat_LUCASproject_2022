@@ -39,49 +39,49 @@ onMounted(() => {
   <!-- <div class="cursor-light" :class="{ 'hidden': cursorMoving }" ref="cursorLight"></div> -->
 
 
-  <div class="container my-4 px-5">
 
-    <!-- <video autoplay muted loop id="bgVideo" class="video">
+
+  <!-- <video autoplay muted loop id="bgVideo" class="video">
       <source src="./assets/img/video/waterfall.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video> -->
 
-    <div class="content-container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-4 text-center">
-          <img :style="{ filter: neonEffect ? 'drop-shadow(0 0 20px #8500FF)' : 'none' }"
-            src="./assets/img/logo/loGoviv_sign.svg" alt="">
-        </div>
-      </div>
-
-      <!-- <div class="lt-animation-top"></div> -->
-
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-4 text-center">
-          <!-- Utilizza RouterLink per creare bottoni -->
-          <RouterLink active-class="active" to="/">
-            <button class="rounded-2 btn_bg_green mx-1">
-              <span>Home</span>
-            </button>
-          </RouterLink>
-
-          <RouterLink active-class="active" to="/lucas">
-            <button class="rounded-2 btn_bg_green mx-1">
-              <span>LUCAS</span>
-            </button>
-          </RouterLink>
-
-          <RouterLink active-class="active" to="/steps">
-            <button class="rounded-2 btn_bg_purple mx-1">
-              <span>Steps</span>
-            </button>
-          </RouterLink>
-        </div>
+  <div class="content-container bg-dark py-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-4 text-center">
+        <img :style="{ filter: neonEffect ? 'drop-shadow(0 0 20px #8500FF)' : 'none' }"
+          src="./assets/img/logo/loGoviv_sign.svg" alt="">
       </div>
     </div>
 
+    <!-- <div class="lt-animation-top"></div> -->
 
+    <div class="row justify-content-center ">
+      <div class="col-12 col-lg-3 text-center gap-5">
+        <!-- Utilizza RouterLink per creare bottoni -->
+        <RouterLink active-class="active" to="/">
+          <button class="rounded-2 btn_bg_green mx-1">
+            <span>HOME</span>
+          </button>
+        </RouterLink>
+
+        <RouterLink active-class="active" to="/lucas">
+          <button class="rounded-2 btn_bg_green mx-1">
+            <span>LUCAS</span>
+          </button>
+        </RouterLink>
+
+        <RouterLink active-class="active" to="/steps">
+          <button class="rounded-2 btn_bg_green mx-1">
+            <span>STEPS</span>
+          </button>
+        </RouterLink>
+      </div>
+    </div>
   </div>
+
+
+
 
   <RouterView />
 
@@ -108,17 +108,15 @@ img {
 
 .btn_bg_green {
   background-color: transparent;
-  color: #00fff7;
+  color: #ffffff;
   border: none;
   cursor: pointer;
   overflow: hidden;
 }
 
 .btn_bg_green:hover {
-  box-shadow: 0 0 15px 10px #00fff7;
-  color: black;
-  font-style: oblique;
-  background-color: #00fff7;
+  color: #00fff7;
+  text-decoration:underline;
 }
 
 .btn_bg_purple {
@@ -130,10 +128,7 @@ img {
 }
 
 .btn_bg_purple:hover {
-  box-shadow: 0 0 15px 10px #00fff7;
-  color: black;
-  font-style: oblique;
-  background-color: #00fff7;
+  text-decoration:underline;
 }
 
 .lt-animation-top {
