@@ -23,13 +23,15 @@ export default {
         <div class="row justify-content-center ">
             <div class="col-12 col-lg-8 bg_row_img py-4 assignament my-5">
 
-                <h1>What is LUCAS project?</h1>
+                <h1>What is <span class="txt_title_thin">LUCAS</span> project?</h1>
 
                 <p>The land use / cover area frame survey (LUCAS) is an in-situ survey. It provides detailed information
                     on specific points as well as harmonised and comparable statistics on land use and land cover for
                     the EU territory.
-
-                    3 types of information are obtained from LUCAS surveys:
+                    <br><br>
+                    3 types of information are obtained from
+                    <a href="https://ec.europa.eu/eurostat/web/lucas">LUCAS</a>
+                    surveys:
 
                 </p>
 
@@ -42,13 +44,15 @@ export default {
                         data. </li>
 
                 </ul>
+
+                <hr>
                 
                 <h1>LUCAS <span class="txt_title_thin">Assignament</span> </h1>
                 <p>
                     The assignment required data collection at points, of precise coordinates, falling
                     within
                     the
-                    province of Verona.<br>
+                    province of <span class="txt_title_thin">Verona</span>.<br>
                     The LUCAS data relate to land use and land cover; they tend to be of an agro-forestry
                     nature.
                 </p>
@@ -79,7 +83,7 @@ export default {
             </div>
 
 
-            <div class="col-12 col-lg-8 py-5 d-flex flex-wrap justify-content-center parameters mb-5">
+            <div class="col-12 col-lg-8 d-flex flex-wrap justify-content-center parameters mb-5">
                 <h1 class="text-center">LUCAS <span class="txt_title_thin">Parameters</span></h1>
 
                 <div class="col-11 col-lg-11 param_item">

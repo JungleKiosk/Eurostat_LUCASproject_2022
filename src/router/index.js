@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import HomeView from "../views/HomeView.vue"
 import LucasView from "../views/LucasView.vue"
-import StepsView from "../views/StepsView.vue"
+import ObjectiveView from "../views/ObjectiveView.vue"
+import MyFlowView from "../views/MyFlowView.vue"
 /* ------------------------------------------------- */
 
 
@@ -21,9 +22,14 @@ const router = createRouter({
             component: LucasView
         },
         {
-            path: "/steps",
-            name: "steps",
-            component: StepsView
+            path: "/Objective",
+            name: "Objective",
+            component: ObjectiveView
+        },
+        {
+            path: "/MyFlow",
+            name: "MyFlow",
+            component: MyFlowView
         }
     ]
 })

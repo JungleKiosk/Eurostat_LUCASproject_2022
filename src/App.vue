@@ -65,9 +65,15 @@ onMounted(() => {
           </button>
         </RouterLink>
 
-        <RouterLink active-class="active" to="/steps">
+        <RouterLink active-class="active" to="/Objective">
           <button class="rounded-2 btn_bg_green mx-1">
-            <span>STEPS</span>
+            <span>Objective</span>
+          </button>
+        </RouterLink>
+
+        <RouterLink active-class="active" to="/MyFLOW">
+          <button class="rounded-2 btn_bg_green mx-1">
+            <span>myFLOW</span>
           </button>
         </RouterLink>
       </div>
