@@ -42,27 +42,16 @@ export default {
         </div>
 
         <ul class="p-3">
-            <li><a class="ancor_menu" href="#step1"></a></li>
+            <li><a class="ancor_menu" href="#step1">1. extrapolate the points</a></li>
             <hr>
-            <li><a class="ancor_menu" href="#step2"></a></li>
+            <li><a class="ancor_menu" href="#step2">2. topological districts</a></li>
             <hr>
-            <li><a class="ancor_menu" href="#step3"></a></li>
+            <li><a class="ancor_menu" href="#step3">3. Shortest path to point</a></li>
             <hr>
-            <li><a class="ancor_menu" href="#step4"></a></li>
+            <li><a class="ancor_menu" href="#step4">4. data entry iteration</a></li>
             <hr>
-            <li><a class="ancor_menu" href="#step5"></a></li>
+            <li><a class="ancor_menu" href="#step5">5. import into Google My Maps</a></li>
             <hr>
-            <li><a class="ancor_menu" href="#step6"></a></li>
-            <hr>
-            <li><a class="ancor_menu" href="#step7"></a></li>
-            <hr>
-            <li><a class="ancor_menu" href="#step8"></a></li>
-            <hr>
-            <li><a class="ancor_menu" href="#step9"></a></li>
-            <hr>
-            <li><a class="ancor_menu" href="#step10"></a></li>
-            <hr>
-            <li><a class="ancor_menu" href="#step11"></a></li>
         </ul>
 
     </nav>

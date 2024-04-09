@@ -1,4 +1,11 @@
 <script>
+import MenuToggle from './MenuToggle.vue';
+import FirstStep from '../components/FirstStep.vue';
+import SecondStep from '../components/SecondStep.vue';
+import ThirdStep from '../components/ThirdStep.vue';
+import FourthStep from '../components/FourthStep.vue';
+import CutterPage from '../components/CutterPage.vue';
+import LastStep from '../components/LastStep.vue';
 import Footer from '../components/Footer.vue';
 
 
@@ -9,7 +16,7 @@ export default {
         }
     },
     components: {
-        Footer
+        MenuToggle, FirstStep, SecondStep, ThirdStep, FourthStep, CutterPage, LastStep, Footer
     }
 }
 
@@ -19,22 +26,20 @@ export default {
 
 <template>
 
+    <MenuToggle />
 
-
-    <h1>What is <span class="txt_title_thin">LUCAS</span> project?</h1>
-
-
-
+    <FirstStep></FirstStep>
+    <SecondStep></SecondStep>
+    <ThirdStep></ThirdStep>
+    <FourthStep></FourthStep>
+    <CutterPage></CutterPage>
+    <LastStep></LastStep>
     <Footer></Footer>
+
+
 
 </template>
 
 <style>
-.img_copernicus {
-    width: 90%;
-}
 
-.img_parameters {
-    width: 80%;
-}
 </style>

@@ -1,11 +1,11 @@
-<script setup>
-import MenuToggle from './MenuToggle.vue';
+<script>
+
 
 </script>
 
 
 <template>
-    <MenuToggle />
+
 
     <div class="container mt-5" id="Results">
         <div class="row justify-content-center">
