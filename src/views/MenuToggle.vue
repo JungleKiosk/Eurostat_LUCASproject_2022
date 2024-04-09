@@ -53,6 +53,7 @@ export default {
             <li><a class="ancor_menu" href="#step5">5. import into Google My Maps</a></li>
             <hr>
         </ul>
+    
 
     </nav>
 </template>

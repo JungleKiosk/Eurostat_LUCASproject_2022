@@ -1,6 +1,16 @@
 <script>
+import Footer from '../components/Footer.vue';
 
-
+export default {
+    name: "Home",
+    data() {
+        return {
+        }
+    },
+    components: {
+        Footer
+    }
+}
 </script>
 
 
@@ -123,7 +133,7 @@
                         <div class="col-3 col-lg-2 text-center">
                             <a href="https://www.youtube.com/watch?v=3JjZnE-iQ6M&list=PLR8J_sq3CKNeNDxQ5qduA0e1RSphD2sfV"
                                 target="_blank">
-                                <img class="text-center zoom_yt" src="../assets/img/yt.svg" alt="">
+                                <img class="text-center zoom_yt" src="../assets/img/logo/yt.svg" alt="">
                             </a>
                             <span>Click</span>
                         </div>
@@ -132,11 +142,11 @@
 
 
 
-
+                <hr>
                 <div class="line my-5"></div>
                 <h2 class="text-center ">But ...</h2>
                 <h2 class="text-center">... How to develop a map useful for your goals?</h2>
-
+                <hr>
 
 
                 <p class="text-center my-5">
@@ -151,7 +161,7 @@
 
                 <p>
 
-                    I want to clarify that the following methods are the result of my personal logic, which means that
+                    I want to clarify that the flow methods are the result of my personal logic, which means that
                     the same
                     result can be achieved in other ways and with other technologies. I remain open to constructive
                     criticism and
@@ -161,11 +171,11 @@
 
                 <div class="line my-5"></div>
 
-                <h2 class="text-center p-5">that said,<span class="txt_title_thin"> ENJOY</span> it</h2>
 
             </div>
         </div>
     </div>
+    <Footer></Footer>
 
 </template>
 

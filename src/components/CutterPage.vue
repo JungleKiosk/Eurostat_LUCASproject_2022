@@ -48,9 +48,7 @@ export default {
 
 <template>
     <main id="banner_totals">
-        <h1 class="text-center py-3">estimated <span class="txt_primary">Totals</span> </h1>
         <section id="cutter_page">
-    
             <div class="container">
                 <div class="row justify-content-between align-items-center text-center">
                     <div v-for="statistic in statistics" class="col-12 col-lg-2 col_cutter py-4 count-animation">

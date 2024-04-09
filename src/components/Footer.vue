@@ -9,32 +9,39 @@
         <div class="row justify-content-center mt-5">
 
             <div class="col-sm-4 col-md-3 text-center">
-                <h3 class=""></h3>
-
+                <h3 class="">Follow me</h3>
                 <a href="#"><img class="icon_social mx-2" src="../assets/img/logo/github_footer.svg" alt=""></a>
                 <a href="#"><img class="icon_social mx-2" src="../assets/img/logo/linkedin_footer.svg" alt=""></a>
                 <a href="#"><img class="icon_social mx-2" src="../assets/img/logo/youtube_footer.svg" alt=""></a>
-
             </div>
 
         </div>
 
         <div class="row justify-content-center mt-5">
 
-            <div class="col-3 col-lg-2 col-sm-4 col-md-3">
-                <h3>Projects</h3>
+            <div class="col-12 col-lg-6">
+                <h5>My Projects</h5>
                 <ul>
-                    <li><a href="#">Forest Suitability</a></li>
-                    <li><a href="#">Soil Degradation</a></li>
-                    <li><a href="#">Chestnut Zoning</a></li>
+                    <li>🌳<a class="txt_primary color_txt_link"
+                            href=" https://junglekiosk.github.io/QGIS_forest_suitability/" target="_blank"> Forest
+                            Suitability</a></li> <br>
+                    <li>🛰️<a class="txt_primary color_txt_link"
+                            href="https://junglekiosk.github.io/QGIS_RS_NDVI_CIgreen/" target="_blank"> NDVI &
+                            CIgreen</a></li><br>
+                    <li>♨️<a class="txt_primary color_txt_link"
+                            href="https://junglekiosk.github.io/QGIS_SoilDegradation/" target="_blank"> Soil
+                            Degradation</a></li><br>
+                    <li>🌰<a class="txt_primary color_txt_link" href="https://junglekiosk.github.io/QGIS_zoning/"
+                            target="_blank"> Chestnut Zoning</a></li><br>
+                    <li>🗺️<a class="txt_primary color_txt_link" href="https://junglekiosk.github.io/QGIS_SoilTexture/"
+                            target="_blank"> Mapping Soil Texture</a></li><br>
                 </ul>
             </div>
-            <div class="col-3 col-lg-2 col-md-3">
-                <h3>Stack</h3>
+            <div class="col-12 col-lg-2">
+                <h5>Contacts</h5>
                 <ul>
-                    <li><a href="#">QGIS</a></li>
-                    <li><a href="#">Python</a></li>
-                    <li><a href="#">VueJs</a></li>
+                    <li>+39 3311874661</li>
+                    <li>eso.fra24@gmail.com</li>
                 </ul>
             </div>
 

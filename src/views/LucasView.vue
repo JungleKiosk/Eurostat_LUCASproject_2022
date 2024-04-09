@@ -30,7 +30,7 @@ export default {
                     the EU territory.
                     <br><br>
                     3 types of information are obtained from
-                    <a href="https://ec.europa.eu/eurostat/web/lucas">LUCAS</a>
+                    <a href="https://ec.europa.eu/eurostat/web/lucas" target="_blank">LUCAS</a>
                     surveys:
 
                 </p>
@@ -38,8 +38,8 @@ export default {
                 <ul>
                     <li>microdata: land cover, land use, and environmental parameters associated with the individual
                         points
-                        surveyed</li>
-                    <li>point and landscape photos in the 4 cardinal directions</li>
+                        surveyed</li> <br>
+                    <li>point and landscape photos in the 4 cardinal directions</li> <br>
                     <li>estimates on land cover and land use, which are produced from microdata based on weighted point
                         data. </li>
 
