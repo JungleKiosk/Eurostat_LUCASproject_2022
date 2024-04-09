@@ -52,6 +52,11 @@ export default {
                             carry out
                             data collection for the <span class="txt_primary">LUCAS2022</span> project.
                         </p>
+                        <div class="col-12 text-center mb-3">
+                           <a href="https://ec.europa.eu/eurostat/web/main/home"><img class="eurostat_logo" src="../assets/img/dec/eurostat.svg" alt=""></a> 
+                        </div>
+
+
                         <p>
                             On this website you will find the explanation of how to optimise resources, time and keep
                             track of ecological impact at work as <span class="txt_primary">LUCAS Detector</span>;
@@ -147,7 +152,7 @@ export default {
 
             <CutterPage></CutterPage>
 
-            
+
 
 
 
@@ -160,6 +165,10 @@ export default {
 
 <style>
 .img_card {
+    width: 50%;
+}
+
+.eurostat_logo {
     width: 50%;
 }
 </style>
