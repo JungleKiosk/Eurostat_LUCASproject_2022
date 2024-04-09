@@ -115,13 +115,13 @@ img {
 }
 
 .btn_bg_green:hover {
-  color: #00fff7;
+  color: #22ad96;;
   text-decoration:underline;
 }
 
 .btn_bg_purple {
   background-color: transparent;
-  color: #00fff7;
+  color: #22ad96;;
   border: none;
   cursor: pointer;
   overflow: hidden;
@@ -131,26 +131,7 @@ img {
   text-decoration:underline;
 }
 
-.lt-animation-top {
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  z-index: -1;
-}
 
-.lt-animation-top {
-  left: 0;
-  top: 190px;
-  box-shadow: linear-gradient(to right, transparent, 0 0 15px 10px #00fff7);
-  background: linear-gradient(to right, transparent, #00fff7);
-  animation: l-top-passing 30s linear infinite;
-}
-
-.lt-animation-bottom {
-  bottom: 0;
-  background: linear-gradient(to left, transparent, #8500FF);
-  animation: l-bottom-passing 20s linear infinite;
-}
 
 
 @keyframes l-top-passing {

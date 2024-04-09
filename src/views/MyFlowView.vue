@@ -27,6 +27,14 @@ export default {
 <template>
 
     <MenuToggle />
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h1>my <span class="txt_title_thin">FLOW</span> </h1>
+            </div>
+        </div>
+    </div>
+
 
     <FirstStep></FirstStep>
     <SecondStep></SecondStep>
@@ -40,6 +48,4 @@ export default {
 
 </template>
 
-<style>
-
-</style>
+<style></style>
