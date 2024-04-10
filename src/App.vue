@@ -73,7 +73,7 @@ onMounted(() => {
 
         <RouterLink active-class="active" to="/MyFLOW">
           <button class="rounded-2 btn_bg_green mx-1">
-            <span>GIS fllow</span>
+            <span>GIS flow</span>
           </button>
         </RouterLink>
       </div>
