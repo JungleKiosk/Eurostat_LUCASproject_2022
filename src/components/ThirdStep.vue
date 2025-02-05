@@ -38,7 +38,18 @@ export default {
                     img_gep: img_gep_2,
                 }
             ],
-
+            videos: [
+                {
+                    title: "2. Shorter Path by QGIS",
+                    thumbnail: "https://img.youtube.com/vi/Wbse3awiWEs/hqdefault.jpg",
+                    link: "https://youtu.be/Wbse3awiWEs?si=tQQMnt8CAc71V7q5"
+                },
+                {
+                    title: "3. Control by Google Earth Pro",
+                    thumbnail: "https://img.youtube.com/vi/91kFQ2DMe50/hqdefault.jpg",
+                    link: "https://youtu.be/91kFQ2DMe50?si=DMjvBRkMgtp1uedo"
+                }
+            ],
             currentIndex: 1,
         }
     },
@@ -69,15 +80,20 @@ export default {
                         administrative boundaries of Verona. <br> [ same procedure described above: Clip Geoprocessing ]
                     </p>
                     <p>
-                        In the same way as described above, I then subdivided the road graphs for each "cardinal topological
+                        In the same way as described above, I then subdivided the road graphs for each "cardinal
+                        topological
                         district" (roads: North, East, South, West). [ Clips
                         Geoprocessing ]
-                        Taking advantage of these SHPs, I calculated the shortest routes to reach the LUCAS points, having
+                        Taking advantage of these SHPs, I calculated the shortest routes to reach the LUCAS points,
+                        having
                         the Verona railway station as a starting point. <br>
-                        I have prepared the routes so as to be able to sample AT LEAST ten LUCAS points a day, trying when
-                        possible to develop round-trip routes; In this way I was able to take advantage of the QGIS Python
+                        I have prepared the routes so as to be able to sample AT LEAST ten LUCAS points a day, trying
+                        when
+                        possible to develop round-trip routes; In this way I was able to take advantage of the QGIS
+                        Python
                         API functions to calculate the parameters of
-                        organizational interest: time taken for each journey, fuel consumption and costs, ecological impact
+                        organizational interest: time taken for each journey, fuel consumption and costs, ecological
+                        impact
                         in terms of CO2 emissions.
                     </p>
 
@@ -130,15 +146,18 @@ export default {
                     </p>
                     <p>
                         In fact, analyzing the result, I found myself forced to modify the path with the topological
-                        tools of QGIS.<br> The images below show that the distance between the road and the point is only
+                        tools of QGIS.<br> The images below show that the distance between the road and the point is
+                        only
                         almost
                         100 m, but there is an<span class="txt_primary"> agricultural ditch</span>, which in the
                         spring-summer season could be impenetrable due
                         to
                         vegetation and/or agricultural waters. <br> <br>
-                        Furthermore, taking advantage of the Street View Mode function of Google Earth Pro it was possible
+                        Furthermore, taking advantage of the Street View Mode function of Google Earth Pro it was
+                        possible
                         to
-                        get an idea of what could have been found. <br> As you can see, the passage to reach the point was
+                        get an idea of what could have been found. <br> As you can see, the passage to reach the point
+                        was
                         blocked by a building site (for my personal curiosity I passed through it and it was actually
                         there)<br><br>
                     </p>
@@ -163,11 +182,13 @@ export default {
                 <div class="row justify-content-center my-3">
                     <div class="col-12 col-lg-6 col-md-12 text-center">
                         <p><strong>QGIS</strong></p>
-                        <img class="rounded-3 my_maps" src="../assets/img/third_step/QGIS_p79_viaGalileoGalilei.png" alt="">
+                        <img class="rounded-3 my_maps" src="../assets/img/third_step/QGIS_p79_viaGalileoGalilei.png"
+                            alt="">
                     </div>
                     <div class="col-12 col-lg-6 col-md-12 text-center">
                         <p><strong>Google Maps</strong></p>
-                        <img class="rounded-3 my_maps" src="../assets/img/third_step/MyMaps_via_GB_Zenetti_closed.png" alt="">
+                        <img class="rounded-3 my_maps" src="../assets/img/third_step/MyMaps_via_GB_Zenetti_closed.png"
+                            alt="">
                     </div>
                 </div>
                 <div class="text-dark"></div>
@@ -201,21 +222,16 @@ export default {
                 </div>
 
                 <div class="container">
-                    <div class="row justify-content-center">
-                        
-                        <div class="col-3 col-lg-1 text-center">
-                            <a href="https://www.youtube.com/watch?v=Wbse3awiWEs&list=PLR8J_sq3CKNeNDxQ5qduA0e1RSphD2sfV&index=2" target="_blank">
-                                <img class="text-center zoom_yt" src="../assets/img/logo/yt.svg" alt="">
-                            </a>
-                            <span>Click</span>
-                        </div>
-                        
-                        <div class="col-3 col-lg-1 text-center">
-                            
-                            <a href="https://www.youtube.com/watch?v=91kFQ2DMe50&list=PLR8J_sq3CKNeNDxQ5qduA0e1RSphD2sfV&index=3" target="_blank">
-                                <img class="text-center zoom_yt" src="../assets/img/logo/yt.svg" alt="">
-                            </a>
-                            <span>Click</span>
+                    <div class="row justify-content-center mt-4">
+                        <div v-for="(video, index) in videos" :key="index" class="col-12 col-md-4">
+                            <div class="card mb-4 bg-dark text-info fw-bold">
+                                <img :src="video.thumbnail" class="card-img-top" alt="Copertina Video">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ video.title }}</h5>
+                                    <br>
+                                    <a :href="video.link" target="_blank" class="btn btn-primary">Go to Video <img class="text-center zoom_yt" src="../assets/img/logo/yt.svg" alt=""></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -234,10 +250,13 @@ export default {
     </main>
 </template>
 
-<style>
+<style scoped>
 img {
     width: 100%;
 
+}
+.zoom_yt{
+    width: 10%;
 }
 
 .gep {

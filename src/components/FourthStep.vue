@@ -16,7 +16,14 @@ export default {
             canPlayVideo: this.checkVideoSupport(),
             showSlider: false,
             activeSlide: 0,
-            totalSlides: 4
+            totalSlides: 4,
+            videos: [
+                {
+                    title: "4. Add data shape file by QGIS Python shell",
+                    thumbnail: "https://img.youtube.com/vi/Nn0KPBUGFXQ/hqdefault.jpg",
+                    link: "https://youtu.be/Nn0KPBUGFXQ?si=gMYiZbsknz63oWWi"
+                }
+            ],
         };
     }, components: { PyAddData, PyShpToCsv, SliderCsvPivot, ChartCo2, ChartLenght, ChartFuel, ChartHours },
     methods: {
@@ -57,22 +64,24 @@ export default {
                         I saved a lot of time.
                     </p>
 
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-3 col-lg-2 text-center">
-                                <a href="https://www.youtube.com/watch?v=Nn0KPBUGFXQ&list=PLR8J_sq3CKNeNDxQ5qduA0e1RSphD2sfV&index=4" target="_blank">
-                                    <img class="text-center zoom_yt" src="../assets/img/logo/yt.svg" alt="">
-                                </a>
-                                <span>Click</span>
+
+                    <div class="row justify-content-center mt-4">
+                        <div v-for="(video, index) in videos" :key="index" class="col-12 col-lg-8">
+                            <div class="card mb-4 bg-dark text-info fw-bold text-center">
+                                <img :src="video.thumbnail" class="card-img-top" alt="Copertina Video">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ video.title }}</h5>
+                                    <br>
+                                    <a :href="video.link" target="_blank" class="btn btn-primary">Go to Video <img
+                                            class="text-center zoom_yt" src="../assets/img/logo/yt.svg" alt=""></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                     <PyAddData></PyAddData>
-
-
                     <p>
-                        The output of the code is the following attribute table for each hand-modified shortest path, where
+                        The output of the code is the following attribute table for each hand-modified shortest path,
+                        where
                         you see the calculated variables:
                     <div>
                         <li> <span class="tile text-decoration-underline" title="1 + $id">id</span> = numerical
@@ -81,7 +90,8 @@ export default {
                         <li> <span class="tile text-decoration-underline" title="(' $length/1000' )">length_Km</span> =
                             length in kilometers of the route
                         </li>
-                        <li> <span class="tile text-decoration-underline" title="('( length_Km/50)*60')">time</span> = time
+                        <li> <span class="tile text-decoration-underline" title="('( length_Km/50)*60')">time</span> =
+                            time
                             required with an average speed of 50km/h
                         </li>
                         <li> <span class="tile text-decoration-underline" title="('100/4.6')">km_L</span> = consumption
@@ -93,14 +103,16 @@ export default {
                         <li> <span class="tile text-decoration-underline" title="('( length_Km*105 )')">CO2_gkm</span> =
                             carbon dioxide emitted by mine machine
                         </li>
-                        <span><span></span> please note: the cost of fuel is to be referred to during the period of rising
+                        <span><span></span> please note: the cost of fuel is to be referred to during the period of
+                            rising
                             prices due to the war in Ukraine</span>
                     </div>
                     </p>
                     <p>
                         To better manage the data obtained and make statistics of it, I preferred my personal working
                         method,
-                        to extrapolate all the Attribute Tables in CSV format, in order to have an easy-to-read dataset from
+                        to extrapolate all the Attribute Tables in CSV format, in order to have an easy-to-read dataset
+                        from
                         <span class="tile text-decoration-underline"
                             title="In this way it was possible to estimate fuel consumption, in monetary terms and in terms of CO2 emissions.">import
                             in Excel.
@@ -136,7 +148,8 @@ export default {
 
                     </div>
 
-                    <button class="btn text-light zoom-effect lucas_link my-4" @click="toggleSlider">{{ showSlider ? 'Hide Excel' : 'Original Excel' }}</button>
+                    <button class="btn text-light zoom-effect lucas_link my-4" @click="toggleSlider">{{ showSlider ?
+                        'Hide Excel' : 'Original Excel' }}</button>
 
                     <SliderCsvPivot v-if="showSlider"></SliderCsvPivot>
 
@@ -153,6 +166,10 @@ export default {
 <style scoped>
 ul {
     list-style-type: none;
+}
+
+.zoom_yt{
+    width: 10%;
 }
 
 .slider_container {

@@ -6,6 +6,19 @@ export default {
 
         return {
 
+            videos: [
+                {
+                    title: "5. Join Excel to Attribute Table by QGIS",
+                    thumbnail: "https://img.youtube.com/vi/AOFmzcMYqbw/hqdefault.jpg",
+                    link: "https://youtu.be/AOFmzcMYqbw?si=rlltZo840ph2a1O9"
+                }
+                ,
+                {
+                    title: "6.  From Shape file to KML by MMQGIS",
+                    thumbnail: "https://img.youtube.com/vi/-joRX934yrg/hqdefault.jpg",
+                    link: "https://youtu.be/-joRX934yrg?si=UPllPG6bXTAV3oXr"
+                }
+            ]
         };
     }
 
@@ -82,39 +95,31 @@ export default {
                     </p>
 
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-3 col-lg-2 text-center">
-                                <a
-                                    href="https://www.youtube.com/watch?v=AOFmzcMYqbw&list=PLR8J_sq3CKNeNDxQ5qduA0e1RSphD2sfV&index=5" target="_blank">
-                                    <img class="text-center zoom_yt" src="../assets/img/logo/yt.svg" alt="">
-                                </a>
-                                <span>Click</span>
+                        <p class=" text-center">
+                            Once the KMLs have been obtained, it is possible to create the personal work map in Google
+                            My
+                            Maps
+                            and on a
+                            daily basis
+                            update it. Below is my personal map and the legend of the icons
+
+                        </p>
+
+                        <div class="row justify-content-center mt-4">
+                            <div v-for="(video, index) in videos" :key="index" class="col-12 col-lg-6">
+                                <div class="card mb-4 bg-dark text-info fw-bold text-center">
+                                    <img :src="video.thumbnail" class="card-img-top" alt="Copertina Video">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ video.title }}</h5>
+                                        <br>
+                                        <a :href="video.link" target="_blank" class="btn btn-primary">Go to
+                                            Video <img class="text-center zoom_yt" src="../assets/img/logo/yt.svg"
+                                                alt=""></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <p class=" text-center">
-                        Once the KMLs have been obtained, it is possible to create the personal work map in Google My
-                        Maps
-                        and on a
-                        daily basis
-                        update it. Below is my personal map and the legend of the icons
-
-                    </p>
-
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-3 col-lg-2 text-center">
-                                <a href="https://www.youtube.com/watch?v=-joRX934yrg&list=PLR8J_sq3CKNeNDxQ5qduA0e1RSphD2sfV&index=6"
-                                    target="_blank">
-                                    <img class="text-center zoom_yt" src="../assets/img/logo/yt.svg" alt="">
-                                </a>
-                                <span>Click</span>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
@@ -123,6 +128,10 @@ export default {
 </template>
 
 <style>
+.zoom_yt {
+    width: 10%;
+}
+
 ul {
     list-style-type: none;
 }

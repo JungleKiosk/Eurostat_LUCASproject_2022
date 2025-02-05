@@ -49,18 +49,22 @@ export default {
 <template>
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-                <h1>Video</h1>
+            <div class="col-12 col-lg-8 text-center">
+                <h1>Tutorials</h1>
             </div>
         </div>
 
-        <div class="row mt-4">
-            <div v-for="(video, index) in videos" :key="index" class="col-md-4">
-                <div class="card mb-4 bg-dark text-info fw-bold">
-                    <img :src="video.thumbnail" class="card-img-top" alt="Copertina Video">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ video.title }}</h5>
-                        <a :href="video.link" target="_blank" class="btn btn-primary">Go to Video</a>
+        <div class="container">
+            <div class="row justify-content-center mt-4">
+                <div v-for="(video, index) in videos" :key="index" class="col-md-4">
+                    <div class="card mb-4 bg-dark text-info fw-bold">
+                        <img :src="video.thumbnail" class="card-img-top" alt="Copertina Video">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ video.title }}</h5>
+                            <br>
+                            <a :href="video.link" target="_blank" class="btn btn-primary">Go to Video <img
+                                    class="text-center zoom_yt" src="../assets/img/logo/yt.svg" alt=""></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,6 +78,7 @@ export default {
 .card {
     transition: transform 0.1s ease-in-out;
 }
+
 .card:hover {
     transform: scale(1.05);
 }

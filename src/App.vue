@@ -77,7 +77,7 @@ onMounted(() => {
           </button>
         </RouterLink>
 
-        <RouterLink active-class="active" to="/Video">
+        <RouterLink active-class="active" to="/VideoView">
           <button class="rounded-2 btn_bg_green mx-1">
             <span>Video</span>
           </button>
