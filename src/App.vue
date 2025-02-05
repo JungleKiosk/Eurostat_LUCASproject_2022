@@ -1,36 +1,35 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, provide, onMounted } from 'vue';
+import { RouterView } from 'vue-router';
 
-const cursorLight = ref(null);
-const cursorMoving = ref(false);
-const neonEffect = ref(false);
-let timer; // Variabile per il timer
+const isLightMode = ref(localStorage.getItem('lightMode') === 'true');
 
-// Funzione per aggiornare lo stato del movimento del cursore
-function updateCursorMovement(event) {
-  cursorLight.value.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
-  cursorMoving.value = true; // Imposta lo stato del movimento del cursore su true quando il cursore si muove
-  clearTimeout(timer); // Resetta il timer quando il cursore si muove
-  timer = setTimeout(() => cursorMoving.value = false, 500); // Imposta lo stato del movimento del cursore su false dopo 1 secondo di inattività
+// Funzione per cambiare modalità light/dark
+function toggleMode() {
+  isLightMode.value = !isLightMode.value;
+  localStorage.setItem('lightMode', isLightMode.value);
+  updateBodyClass();
 }
 
-// Aggiungi un listener per l'evento mousemove per aggiornare la posizione del pallino verde neon
-onMounted(() => {
-  window.addEventListener('mousemove', updateCursorMovement);
-});
-
-// Rimuovi il listener quando il componente viene smontato per evitare memory leak
-onBeforeUnmount(() => {
-  window.removeEventListener('mousemove', updateCursorMovement);
-});
-
-function toggleNeonEffect() {
-  neonEffect.value = !neonEffect.value;
+// Funzione per aggiornare la classe nel `<body>` per tutta l'app
+function updateBodyClass() {
+  if (isLightMode.value) {
+    document.body.classList.add('light-mode');
+    document.body.classList.remove('dark-mode');
+  } else {
+    document.body.classList.add('dark-mode');
+    document.body.classList.remove('light-mode');
+  }
 }
+
+// Applichiamo il tema corretto all'avvio
 onMounted(() => {
-  setInterval(toggleNeonEffect, 2000);
+  updateBodyClass();
 });
 
+// Condividiamo la variabile `isLightMode` e la funzione `toggleMode()` con gli altri componenti
+provide('isLightMode', isLightMode);
+provide('toggleMode', toggleMode);
 </script>
 
 
@@ -77,17 +76,18 @@ onMounted(() => {
           </button>
         </RouterLink>
 
-        <RouterLink active-class="active" to="/VideoView">
+        <RouterLink active-class="active" to="/MyFLOW">
           <button class="rounded-2 btn_bg_green mx-1">
             <span>Video</span>
           </button>
         </RouterLink>
-
+        <!-- Bottone per cambiare modalità -->
+        <button @click="toggleMode" class="toggle-mode-btn btn">
+          {{ isLightMode ? '🌙' : '☀️' }}
+        </button>
       </div>
     </div>
   </div>
-
-
 
 
   <RouterView />
@@ -122,20 +122,34 @@ img {
 }
 
 .btn_bg_green:hover {
-  color: #22ad96;;
-  text-decoration:underline;
+  color: #22ad96;
+  ;
+  text-decoration: underline;
 }
 
 .btn_bg_purple {
   background-color: transparent;
-  color: #22ad96;;
+  color: #22ad96;
+  ;
   border: none;
   cursor: pointer;
   overflow: hidden;
 }
 
 .btn_bg_purple:hover {
-  text-decoration:underline;
+  text-decoration: underline;
+}
+
+/* Modalità scura (default) */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Modalità chiara */
+.light-mode {
+  background-color: rgb(183, 183, 183);
+  color: black;
 }
 
 
