@@ -20,6 +20,7 @@ export default {
     <div class="container mt-5" id="Results">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
+                <h1>test</h1>
                 <h1>Final <span class="txt_title_thin">Objective</span> </h1>
                 <p>
                     The final result of the processing is the creation of a map with <span class="txt_primary">Google My
@@ -86,8 +87,7 @@ export default {
                 <p>
                     At the end of the working day, in addition to arranging the collected data in the Eurostat
                     management system
-                    ( <span
-                            class="txt_primary color_txt_link">DMT
+                    ( <span class="txt_primary color_txt_link">DMT
                             Viewer</span>), I was in charge of managing my personal
                     work schedule, in order to update the map daily and
                     distinguish at a glance points beaten from those still to visit. This through the stylization of the
