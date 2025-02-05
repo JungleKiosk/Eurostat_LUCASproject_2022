@@ -50,7 +50,7 @@ provide('toggleMode', toggleMode);
     <!-- <div class="lt-animation-top"></div> -->
 
     <div class="row justify-content-center ">
-      <div class="col-12 col-lg-3 text-center gap-5">
+      <div class="col-12 col-lg-12 text-center gap-5">
         <!-- Utilizza RouterLink per creare bottoni -->
         <RouterLink active-class="active" to="/">
           <button class="rounded-2 btn_bg_green mx-1">
@@ -76,7 +76,7 @@ provide('toggleMode', toggleMode);
           </button>
         </RouterLink>
 
-        <RouterLink active-class="active" to="/Video">
+        <RouterLink active-class="active" to="/VideoView">
           <button class="rounded-2 btn_bg_green mx-1">
             <span>Video</span>
           </button>
