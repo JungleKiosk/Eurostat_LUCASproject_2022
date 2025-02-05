@@ -76,11 +76,12 @@ provide('toggleMode', toggleMode);
           </button>
         </RouterLink>
 
-        <RouterLink active-class="active" to="/MyFLOW">
+        <RouterLink active-class="active" to="/Video">
           <button class="rounded-2 btn_bg_green mx-1">
             <span>Video</span>
           </button>
         </RouterLink>
+
         <!-- Bottone per cambiare modalità -->
         <button @click="toggleMode" class="toggle-mode-btn btn">
           {{ isLightMode ? '🌙' : '☀️' }}
