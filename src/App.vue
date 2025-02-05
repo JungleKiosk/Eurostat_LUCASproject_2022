@@ -76,7 +76,7 @@ provide('toggleMode', toggleMode);
           </button>
         </RouterLink>
 
-        <RouterLink active-class="active" to="/VideoView">
+        <RouterLink active-class="active" to="/Video">
           <button class="rounded-2 btn_bg_green mx-1">
             <span>Video</span>
           </button>
